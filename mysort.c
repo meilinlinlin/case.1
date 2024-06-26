@@ -28,8 +28,6 @@ int compareSRecordsByDepartment(const void* a, const void* b) {
 int compareSRecordsByrawScore(const void* a, const void* b) {
     SRecord* srecordA = (SRecord*)a;
     SRecord* srecordB = (SRecord*)b;
-    if (srecordA->rawScore < 60 && srecordB->rawScore >= 60) return 1;
-    if (srecordA->rawScore >= 60 && srecordB->rawScore < 60) return -1;
     if (srecordA->rawScore < srecordB->rawScore) return -1;
     if (srecordA->rawScore > srecordB->rawScore) return 1;
     return 0;
